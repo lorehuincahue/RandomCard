@@ -1,4 +1,4 @@
-/* eslint-disable */
+/* eslint-disable 
 import "bootstrap";
 import "./style.css";
 
@@ -30,4 +30,4 @@ let generateRandomPintas = function() {
   let pintascards = ["♥", "♠", "♣", "♦️"];
   let indexPinta = Math.floor(Math.random() * pintascards.length);
   return pintascards[indexPinta];
-};
+}; */
