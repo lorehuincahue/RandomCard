@@ -1,12 +1,26 @@
-/* eslint-disable 
 import "bootstrap";
 import "./style.css";
 
-window.onload = function() {
-  document.querySelector(".card").classList.add(generateRandomPintas());
-  document.querySelector(".card").innerHTML = generateRandomNumber();
-};
-let generateRandomNumber = function() {
+let card = document.querySelector(".card");
+let arriba = document.querySelector(".arriba");
+let numero = document.querySelector(".numero");
+let abajo = document.querySelector(".abajo");
+
+let pintas = RandomPinta();
+
+if (pintas == "♥" || pintas == "♦") {
+  arriba.style.color = "red";
+}
+
+if (pintas == "♥" || pintas == "♦") {
+  abajo.style.color = "red";
+}
+
+numero.innerHTML = RandomNumber();
+arriba.innerHTML = pintas;
+abajo.innerHTML = pintas;
+
+let RandomNumber = function() {
   let numeros = [
     "A",
     "2",
@@ -22,12 +36,13 @@ let generateRandomNumber = function() {
     "Q",
     "K"
   ];
-  let indexNum = Math.floor(Math.random() * numeros.length);
-  return numeros[indexNum];
+  let indexNumeros = Math.floor(Math.random() * numeros.length);
+  return numeros[indexNumeros];
 };
 
-let generateRandomPintas = function() {
-  let pintascards = ["♥", "♠", "♣", "♦️"];
-  let indexPinta = Math.floor(Math.random() * pintascards.length);
-  return pintascards[indexPinta];
-}; */
+let RandomPinta = function() {
+  let pintascartas = ["♥", "♠", "♣", "♦️"];
+  let indexPinta = Math.floor(Math.random() * pintascartas.length);
+
+  return pintascartas[indexPinta];
+};

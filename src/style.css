@@ -18,18 +18,15 @@
   font-size: 80px;
 }
 
-::before {
-  content: \2660;
+.arriba {
   position: absolute;
   top: 20px;
   left: 20px;
   font-size: 80px;
 }
 
-::after {
-  content: \2660;
+.abajo {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
-  font-size: 80px;
+  top: 150px;
+  right: 120px;
 }
